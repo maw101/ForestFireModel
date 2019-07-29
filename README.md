@@ -1,5 +1,5 @@
 # ForestFireModel
-Implementation of the Drossel and Schwabl definition of the forest fire model on a 2 dimensional grid.
+Implementation of the Drossel and Schwabl definition of the [forest fire model](https://en.wikipedia.org/wiki/Forest-fire_model) on a 2 dimensional grid.
 
 Each cell in the grid can be in three distinct states: empty, burning and tree.
 
