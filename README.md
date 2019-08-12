@@ -8,3 +8,12 @@ The cell evolves according to the following rules:
 * A tree will burn if at least one neighbour is burning
 * A tree ignites with a given probability even if no neighbour is burning
 * An empty space fills with a tree with a given probability
+
+## Demo
+An example of the programming running with a 0.5 second delay between runs.
+
+* T = Tree
+* B = Burning Tree
+* Blank Cell = Unoccupied
+
+![](demo.gif)
