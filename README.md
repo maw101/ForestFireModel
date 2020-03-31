@@ -1,7 +1,7 @@
 # ForestFireModel
 Implementation of the Drossel and Schwabl definition of the [forest fire model](https://en.wikipedia.org/wiki/Forest-fire_model) on a 2 dimensional grid.
 
-Each cell in the grid can be in three distinct states: empty, burning and tree.
+Each cell in the grid can be in one of three distinct states: empty, burning and tree.
 
 The cell evolves according to the following rules:
 * A burning cell turns into an empty cell
@@ -10,10 +10,24 @@ The cell evolves according to the following rules:
 * An empty space fills with a tree with a given probability
 
 ## Demo
-An example of the programming running with a 0.5 second delay between runs.
+### GUI
+An example of the simulation running with a one second delay between evolutions.
 
+Utilises multi threading so the JavaFX application thread is not being blocked all the time.
+
+Cell states are represented by the following three states colours:
+* Green = Tree
+* Red = Burning Tree
+* Black = Unoccupied
+
+![](README_ASSETS/gui_demo.gif)
+
+### CLI
+An example of the simulation running with a half second delay between evolutions.
+
+Cell states are represented by the following three states:
 * T = Tree
 * B = Burning Tree
 * Blank Cell = Unoccupied
 
-![](demo.gif)
+![](README_ASSETS/cli_demo.gif)
