@@ -1,3 +1,5 @@
+package forestfiremodel.forestfire;
+
 import java.util.Random;
 
 /**
@@ -9,9 +11,6 @@ public class ForestFire {
 
     private char grid[][];
     private int gridSize;
-    private static final char BURNING_CELL = 'B';
-    private static final char TREE_CELL = 'T';
-    private static final char BLANK_CELL = ' ';
     private static final double PROB_TREE = 0.5;
     private static final double PROB_TREE_NO_NEIGHBOURS_BURNING_IGNITES = 0.15;
     private static Random rand;
@@ -20,6 +19,10 @@ public class ForestFire {
         {0, -1},                {0, 1},
         {1, -1},    {1, 0},     {1, 1}};
 
+    // TODO: add JavaDoc to each of these constants
+    public static final char BURNING_CELL = 'B';
+    public static final char TREE_CELL = 'T';
+    public static final char BLANK_CELL = ' ';
 
     /**
      * Instantiates a new Forest fire.
@@ -39,30 +42,6 @@ public class ForestFire {
         this.gridSize = gridSize;
         grid = new char[gridSize][gridSize];
         rand = new Random();
-    }
-
-    /**
-     * Run simulation.
-     */
-    public void runSimulation() {
-        runSimulation(100);
-    }
-
-    /**
-     * Run simulation.
-     *
-     * @param maxRuns the max runs
-     */
-    public void runSimulation(int maxRuns) {
-        int count = 1;
-        populate();
-        render();
-        while (count < maxRuns) {
-            System.out.println("Run #" + count + ": ");
-            evolveOnce();
-            count++;
-            render();
-        }
     }
 
     /**
@@ -111,17 +90,14 @@ public class ForestFire {
         }
     }
 
-    /**
-     * Render.
-     */
-    public void render() {
-        for (int row = 0; row < gridSize; row++) {
-            for (int col = 0; col < gridSize; col++)
-                System.out.print(grid[row][col]);
-            System.out.println();
-        }
-        System.out.println();
-        System.out.println();
+    // TODO: JavaDoc
+    public int getGridSize() {
+        return gridSize;
+    }
+
+    // TODO: JavaDoc
+    public char getPositionValue(int row, int col) {
+        return grid[row][col];
     }
 
     private int countBurningNeighbours(int x, int y) {
