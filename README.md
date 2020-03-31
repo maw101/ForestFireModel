@@ -9,6 +9,10 @@ The cell evolves according to the following rules:
 * A tree ignites with a given probability even if no neighbour is burning
 * An empty space fills with a tree with a given probability
 
+## Cell Evolution Probabilities
+* A tree igniting where no neighbours are burning = 0.15 (15% chance)
+* An empty space filling with a tree = 0.5 (50% chance)
+
 ## Demo
 ### GUI
 An example of the simulation running with a one second delay between evolutions.
