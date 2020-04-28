@@ -40,7 +40,6 @@ public class ForestFire {
     public ForestFire(int gridSize) {
         this.gridSize = gridSize;
         grid = new char[gridSize][gridSize];
-        rand = new Random();
     }
 
     /**
