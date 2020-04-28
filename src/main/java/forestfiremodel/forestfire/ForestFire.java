@@ -83,6 +83,7 @@ public class ForestFire {
                         else if (rand.nextDouble() < PROB_TREE_NO_NEIGHBOURS_BURNING_IGNITES)
                             // if no neighbours burning, ignites with the given probability
                             grid[row][col] = BURNING_CELL;
+                        break;
                 }
             }
         }
