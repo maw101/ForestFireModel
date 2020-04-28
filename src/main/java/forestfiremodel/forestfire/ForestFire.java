@@ -13,7 +13,7 @@ public class ForestFire {
     private int gridSize;
     private static final double PROB_TREE = 0.5;
     private static final double PROB_TREE_NO_NEIGHBOURS_BURNING_IGNITES = 0.15;
-    private static Random rand;
+    private static Random rand = new Random();
     private static final int[][] MOORE_NEIGHBOURS = {
         {-1, -1},   {-1, 0},    {-1, 1},
         {0, -1},                {0, 1},
@@ -30,7 +30,6 @@ public class ForestFire {
     public ForestFire() {
         gridSize = 10;
         grid = new char[gridSize][gridSize];
-        rand = new Random();
     }
 
     /**
