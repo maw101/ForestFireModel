@@ -95,7 +95,8 @@ public class ForestFireGUI extends Application implements ForestFireSimulation {
    }
 
    private class Tile extends StackPane {
-      private int x, y;
+      private int x;
+      private int y;
 
       private Rectangle rect = new Rectangle(TILE_SIZE, TILE_SIZE);
       private Text text = new Text();
