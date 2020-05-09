@@ -85,7 +85,7 @@ public class ForestFire {
                             grid[row][col] = BURNING_CELL;
                         break;
                     default:
-                        throw new RuntimeException("Cell at " + row + " " + col + " has an invalid type.");
+                        throw new IllegalStateException("Cell at " + row + " " + col + " has an invalid type.");
                 }
             }
         }
