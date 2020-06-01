@@ -98,13 +98,23 @@ public class ForestFire {
             }
         }
     }
-
-    // TODO: JavaDoc
+    
+    /**
+     * Gets grid size.
+     *
+     * @return the grid size
+     */
     public int getGridSize() {
         return gridSize;
     }
 
-    // TODO: JavaDoc
+    /**
+     * Gets the value at a given position.
+     *
+     * @param row the row
+     * @param col the column
+     * @return the position value
+     */
     public char getPositionValue(int row, int col) {
         return grid[row][col];
     }
@@ -113,7 +123,7 @@ public class ForestFire {
         int count = 0;
         for (int[] offset : MOORE_NEIGHBOURS)
             if (isCellBurning(x + offset[0], y + offset[1]))
-               count++;
+                count++;
         return count;
     }
 
