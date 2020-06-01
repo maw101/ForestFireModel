@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * The type Forest fire.
- *
+ * <p>
  * Simulates a Forest Fire by implementing the Drossel and Schwabl definition of the forest-fire model.
  */
 public class ForestFire {
@@ -19,9 +19,17 @@ public class ForestFire {
         {0, -1},                {0, 1},
         {1, -1},    {1, 0},     {1, 1}};
 
-    // TODO: add JavaDoc to each of these constants
+    /**
+     * The constant BURNING_CELL to represent a burning cell
+     */
     public static final char BURNING_CELL = 'B';
+    /**
+     * The constant TREE_CELL to represent a tree cell
+     */
     public static final char TREE_CELL = 'T';
+    /**
+     * The constant BLANK_CELL to represent a blank/empty cell
+     */
     public static final char BLANK_CELL = ' ';
 
     /**
@@ -58,13 +66,13 @@ public class ForestFire {
 
     /**
      * Evolves the simulation once.
-     *
+     * <p>
      * Each cell can be in three distinct states: empty, burning and tree. It evolves according to the following
      * rules:
-     *     A burning cell turns into an empty cell
-     *     A tree will burn if at least one neighbour is burning
-     *     A tree ignites with a given probability even if no neighbour is burning
-     *     An empty space fills with a tree with a given probability
+     * A burning cell turns into an empty cell
+     * A tree will burn if at least one neighbour is burning
+     * A tree ignites with a given probability even if no neighbour is burning
+     * An empty space fills with a tree with a given probability
      */
     public void evolveOnce() {
         for (int row = 0; row < gridSize; row++) {
@@ -90,13 +98,23 @@ public class ForestFire {
             }
         }
     }
-
-    // TODO: JavaDoc
+    
+    /**
+     * Gets grid size.
+     *
+     * @return the grid size
+     */
     public int getGridSize() {
         return gridSize;
     }
 
-    // TODO: JavaDoc
+    /**
+     * Gets the value at a given position.
+     *
+     * @param row the row
+     * @param col the column
+     * @return the position value
+     */
     public char getPositionValue(int row, int col) {
         return grid[row][col];
     }
@@ -105,7 +123,7 @@ public class ForestFire {
         int count = 0;
         for (int[] offset : MOORE_NEIGHBOURS)
             if (isCellBurning(x + offset[0], y + offset[1]))
-               count++;
+                count++;
         return count;
     }
 
