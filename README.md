@@ -1,4 +1,7 @@
 # ForestFireModel
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/53c09537cdb540babb093e766e9a5016)](https://app.codacy.com/manual/maw101/ForestFireModel?utm_source=github.com&utm_medium=referral&utm_content=maw101/ForestFireModel&utm_campaign=Badge_Grade_Dashboard)
+
 Implementation of the Drossel and Schwabl definition of the [forest fire model](https://en.wikipedia.org/wiki/Forest-fire_model) on a 2 dimensional grid.
 
 Each cell in the grid can be in one of three distinct states: empty, burning and tree.
